@@ -1,0 +1,236 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #f2e0cd;
+    --secondary-color: #d47c3e;
+    --font-color: #292828;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--main-color);
+}
+section{
+    width: 100%;
+    height: 100vh;  
+    background-image: url(rest.png);
+    background-size: cover;
+    background-position: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px;
+    font-size: 25px;
+    font-style: italic;
+}
+nav li {
+  margin-right: 40px;
+}
+nav a {
+  color: #121111;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color:var(--secondary-color);
+}
+#head{
+    font-size: clamp(80px, 15vw, 250px); 
+    color: black;
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+#line{
+    font-size: clamp(20px, 4vw, 40px);
+    color: black;
+    font-style: italic;
+    margin-bottom: 20px;
+    
+}
+.hero{
+    flex:1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h4{
+    margin: 20px;
+    font-size: 25px;
+    margin-top: 5px;
+    font-style: italic;
+}
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color:rgba(225, 115, 25, 0.771);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition:0.3s;
+}
+button:hover{
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+h3{
+    font-size: clamp(30px, 8vw, 50px);
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--secondary-color);
+}
+.about{
+   max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.about img{
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.menu, .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.menu-card{
+   width: calc(25% - 20px);
+    min-width: 250px;
+    background-color: rgba(243, 205, 159, 0.881);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+.menu-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.gallery img{
+    width: calc(25% - 20px);
+    min-width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#reviews {
+    padding: 60px 20px;
+    background-color:rgb(244, 219, 173);
+    height: auto;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background-color:  rgba(243, 205, 159, 0.881);
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    text-align: center;
+    border: 1px solid rgba(212, 124, 62, 0.1);
+}
+
+.stars {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.customer-name {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.contact{
+   text-align: center;
+    padding: 40px 20px;
+    font-size: 22px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 18px;
+}
+@media (max-width: 992px) {
+    .menu-card, .gallery img {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        justify-content: center;
+        padding-right: 0;
+    }
+    
+    nav li {
+        margin: 0 10px;
+    }
+
+    .about {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .menu-card, .gallery img {
+        width: 100%; 
+    }
+
+    #head {
+        font-size: 60px; 
+    }
+}
